@@ -1,5 +1,8 @@
 <?php
     namespace StudentManage;
+
+    use StudentManage\Rest_Api\Login;
+    use StudentManage\Rest_Api\Registration;
     class API{
         public function __construct()
         {
@@ -11,5 +14,11 @@
         {
             $student = new Rest_Api\Student();
             $student->register_routes();
+
+            $register = new Registration();
+            $register->register_routes();
+
+            $login = new Login();
+            $login->register_routes();
         }
     }

@@ -92,7 +92,7 @@ final class Student_manage
         if(is_admin()){
             new StudentManage\Admin\Admin();
         }else{
-            
+            new StudentManage\Frontend();
         }
 
         new StudentManage\API();
